@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>신혜민</title>
+	<script src="https://kit.fontawesome.com/6cec0af3fc.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  	/>
+  	 <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+	<div id="wrapper">
+		<section id="home">
+			<div class="center event_post"></div>
+			<div class="center" id="main_cake_ani"></div>
+			<div class="center" id="main_cake"></div>
+			<div class="center event"><a href="#today_cake"></a>
+			<div class="x_btn"></div>
+			</div>
+			<div class="center scroll"></div>	
+			<div class="center special_btn"></div>
+				<div class="center special_cake">
+					<form class="receipt">
+						사이즈&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="size" type=text name="firstBox" size=10 value="" onFocus="startCalc();" onBlur="stopCalc();">원 <br>
+						디자인&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="design" type=text name="secondBox" size=10 value="" onFocus="startCalc();" onBlur="stopCalc();">원<br>
+						맛&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="taste" type=text name="thirdBox" size=10 value="" onFocus="startCalc();" onBlur="stopCalc();">원 <br>
+						레터링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="lettering" type=text name="fourBox" size=10 value="" onFocus="startCalc();" onBlur="stopCalc();">원 <br>
+						추가옵션&nbsp;&nbsp;&nbsp;<input id="option" type=text name="fiveBox" size=10 value="" onFocus="startCalc();" onBlur="stopCalc();">원 <br><br><br><br><br>
+					 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=text name="sixBox" size=10 id="sum_result" value="">원
+					 	<button id="sum_btn">총합</button>
+					</form>
+					<div id="tab_contents">
+					<nav>
+						<ul>
+							<li class="active">step1</li>
+							<li>step2</li>			
+							<li>step3</li>
+							<li>step4</li>
+							<li>step5</li>
+						</ul>
+					</nav>
+					<div class="content">
+						<!-- 캐로셀 -->
+						<!-- step1 -->
+						<div class="step1">
+							<li data-cost="5000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="8000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="10000" data-text="선택하실려면 클릭해주세요."></li>
+						</div>
+						<div class="step1_btn_set">
+							<li></li>
+							<li></li>
+							<li></li>
+						</div>
+					</div>
+						<!-- step2 -->
+					<div class="content">
+						<div class="step2">
+							<li data-cost="2000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="5000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="6000" data-text="선택하실려면 클릭해주세요."></li>
+						</div>
+					<div class="step1_btn_set">
+							<li></li>
+							<li></li>
+							<li></li>
+						</div>
+					</div>
+					<div class="content">
+						<!-- 캐로셀 -->
+						<!-- step3 -->
+						<div class="step3">
+							<li data-cost="2000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="2000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="1000" data-text="선택하실려면 클릭해주세요."></li>
+						</div>
+						<div class="step1_btn_set">
+							<li></li>
+							<li></li>
+							<li></li>
+						</div>
+					</div>
+						<!-- step4 -->
+					<div class="content">
+						<form class="step4_form" action="#" method="get">
+						<textarea name="suggest"cols="50" rows="6"></textarea>
+						</form>
+						<p class="step4_check" data-cost="2000">선택</p>
+						<div class="check_box2"><div class="check_box_2_ok2"></div>
+					</div>		
+					</div>
+						<!-- step5 -->
+					<div class="content">
+						<div class="step5">
+							<li data-cost="2000" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="500" data-text="선택하실려면 클릭해주세요."></li>
+							<li data-cost="2500" data-text="선택하실려면 클릭해주세요."></li>
+						</div>
+							<div class="step1_btn_set">
+							<li></li>
+							<li></li>
+							<li></li>
+						</div>
+					</div>
+					<div class="user_cost">
+						<li data-cost="25000">test</li>
+					</div>
+					<div class="special_cake_x_btn"><p>닫기</p></div>
+			</div>
+		</section>
+		<section id="today_cake">
+			<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			</ul>
+			<div class="cake">
+				<ol class="cake_img center">
+					<li>
+						<div class="cake_check center">
+							<form action="#" method="get">
+								이메일 : <input id="write" type="text" placeholder="">@<select  id="mail">
+									<option value="">naver.com</option>
+									<option value="">daum.net</option>
+									<option value="">gmail.com</option>
+								</select>
+								<input id="confirmBtn" type="submit" value="확인">
+							</form>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+			<div class="center event_coffee"></div>
+			<!-- <div class="event_btn"></div> -->
+		</section>
+		<section id="handmade">
+			<div class="center class"></div>
+			<div class="center pong"></div>
+			<div id="slide">
+				<li class="center card_1">
+					<div></div>
+				</li>
+				<li class="center card_2">
+					<div></div>
+				</li>
+				<li class="center card_3">
+					<div></div>
+				</li>
+				<li class="center card_4">
+					<div></div>
+				</li>
+			</div>
+		</section>
+		<section id="review">
+			<div class="center title_5"></div>
+			<div class="center FAQ">
+			<div class="center faq_bt_1"></div>
+			<div class="center faq_bt_2"></div>
+			<div class="center faq_bt_3"></div>
+			<div class="center review_bg">
+				<ol class="center write">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+				<ol class="center write_btn">
+					<li>1</li>
+					<li>2</li> 
+					<li>3</li>
+				</ol>
+				<form action="#" method="get">
+				<p>구매후기</p>
+				<textarea name="suggest" placeholder="제품 후기를 남겨주세요." cols="140" rows="5"></textarea>
+				<input type="submit" value="작성완료">
+				<div class="check_box_2"></div>
+				</form>
+				</div>
+				</div>
+			<footer>
+				<h3>(주)케이크투유</h3>
+			<p class="p1">
+				대표 : 신혜민 / 경기도 수원시 팔달구 <br>
+				사업자등록번호 : 000-00-00000 <br>
+				전화: 031-000-0000 | 팩스: 031-000-0000
+			</p>
+			<h2>1644-0000</h2> 
+			<p class="p2">
+				평일 오전 10시 ~ 오후 7시 
+		 	</p>
+		 	<p class="p3">
+				고객센터 
+		 	</p>
+		 	</footer>
+			<div class="center delivery"><div class="delivery_x_btn"></div></div>
+			<div class="center cancel"><div class="cancel_x_btn"></div></div>
+			<div class="center money"><div class="money_x_btn"></div></div>
+		</section>
+		<nav id="gnb">
+			<ul>
+				<li class="active"><a href="#home">home</a>
+					<h6>HOME</h6>
+				</li>
+				<li><a href="#today_cake">today_cake</a>
+				<h6>오늘의케이크</h6>
+				</li>
+				<li><a href="#handmade">handmade</a>
+				<h6>직접만들어요</h6>
+				</li>
+				<li><a href="#review">review</a>
+				<h6>FAQ / REVIEW</h6>
+				</li>
+			</ul>
+		</nav>
+		<nav id="lnb_top">
+			<ul>
+				<li><a href="#home">home</a></li>
+				<li><a href="#today_cake">today_cake</a></li>
+				<li><a href="#handmade">handmade</a></li>
+				<li><a href="#review">review</a></li>
+			</ul>
+		</nav>
+		<div class="vedio">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/DRrf-07VWf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="vedio_cancel_x_btn"></div>
+		</div>
+	</div>
+	 <script src="js/myscript.js"></script>
+</body>
+</html>
